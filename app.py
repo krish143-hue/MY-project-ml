@@ -1,5 +1,5 @@
 # Rebuild trigger
-
+# force rebuild again
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -65,3 +65,5 @@ if st.button("Predict"):
         st.error("⚠️ High risk of heart disease.")
     else:
         st.success("✅ Low risk of heart disease.")
+import pkg_resources
+print([pkg.key for pkg in pkg_resources.working_set])
